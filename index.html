@@ -3,150 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HR Management</title>
 </head>
 <body>
+
+<table width="100%" bgcolor="#2c3e50" cellpadding="15">
+    <tr>
+        <td>
+            <font color="white" size="5"><b>HR Management</b></font>
+            &nbsp;&nbsp;&nbsp;
+            <font color="white">Home</font>
+            &nbsp;&nbsp;
+            <font color="#999">Contact</font>
+        </td>
+        <td align="right">
+            <input type="text" placeholder="Search..." size="30">
+            <button bgcolor="#333">Search</button>
+        </td>
+    </tr>
+</table>
+
+<br><br>
+<table width="95%" align="center" border="0" cellpadding="10">
+    <tr>
+        <td>
+            <font size="5"><b>Employee</b></font>
+        </td>
+        <td align="right">
+            <button bgcolor="blue"><font color="white">+ Add</font></button>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table width="95%" align="center" border="1" cellpadding="10" cellspacing="0" bordercolor="#ddd">
+    <tr bgcolor="#f5f5f5">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Position</th>
+        <th>Action</th>
+    </tr>
     
-    <form>
-        <h3>Basic info</h3>
-        <hr>
-        <table cellpadding = "6">
-            <tr>
-                <th><label for="Employee ID">Employee ID</label></th>
-                <td>9</td>
-            </tr>
-            <tr>
-                <th>Last name</th>
-                <td>Dodsworth</td>
-            </tr>
-            <tr>
-                <th><label for="First name">First name</label></th>
-                <td><input type="text" id="First name" value="Anne"></td>
-            </tr>
-            <tr>
-                <th>Gender</th>
-                <td><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
-                    <input type="radio" id="XXX" name="gender" value="XXX"><label for="XXX">XXX</label>
-                    <input type="radio" id="YYY" name="gender" value="YYY"><label for="YYY">YYY</label>
-                    
-                </td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td><input type="text" id="title" placeholder="Title..."></td>
-            </tr>
-            <tr>
-                <th>Suffix</th>
-                <td><input type="text" id="suffix" placeholder="Ms..."></td>
-            </tr>
-            <tr><th>BirthDate</th>
-                <td><input type="datetime-local" id="birthdate" placeholder="BirthDate..."></td></tr> 
-            <tr>
-                <th>Hire Date</th>
-                <td><input type="datetime-local" id="hiredate" placeholder="Hire Date..."></td>
-            </tr>
-            <tr>
-                <th>SSN #(if appicable)</th>
-                <td><input type="text" id="ssn" placeholder="......."></td>
-            </tr>
-            <tr>
-                <th>Report to</th>
-                <td>
-                    <select name="ReportTo" id="ReportTo">
-                        <option value="Buchanan">Buchanan</option>
-                        <option value="aloalo">aloalo</option>
-                        <option value="hihi">hihi</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <br>
-        <h3>Contact info</h3>
-        <hr>
-        <table cellpadding = "6">
-            <tr>
-            <td>Email</td>
-            <td><input type="email" name="email" placeholder="name@example.com"></td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><input type="text" name="address" value="7 Houndstooth Rd."></td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td><input type="text" name="city" value="London"></td>
-        </tr>
-        <tr>
-            <td>Region</td>
-            <td><input type="text" name="region"></td>
-        </tr>
-        <tr>
-            <td>Postal Code</td>
-            <td><input type="text" name="postal_code" value="WG2 7LT"></td>
-        </tr>
-        <tr>
-            <td>Country</td>
-            <td><input type="text" name="country" value="VN"></td>
-        </tr>
-        <tr>
-            <td>US Phone Home</td>
-            <td><input type="tel" name="phone" value="(234) 234-2342"></td>
-        </tr>
-        <tr>
-            <td>Photo</td>
-            <td><input type="text" name="photo" value="EmpID9.bmp"></td>
-        </tr>
-        </table>
-        <h3>Optional info</h3>
-        <hr>
-        <table cellpadding = "6">
-         <tr>
-    <td>Notes</td>
-    <td colspan="3"><input type="text" name="notes" value="Anne has a BA degree in English " style="width: 100%;"></td>
-</tr>
-<tr>
-    <td>Preferred<br><br>Active?</td>
-    <td><input type="checkbox" name="preferred1" id="preferred1"><label for="preferred1">Regular</label></td>
-    <td><input type="checkbox" name="preferred2" id="preferred2"><label for="preferred2">Gravy Yard</label></td>   
-    <td><input type="checkbox" name="preferred3" id="preferred3"><label for="preferred3">...</label></td>   
-</tr>
+    <tr>
+        <td>1</td>
+        <td>Fatima Beatriz</td>
+        <td>Fatima Beatriz@gmail.com</td>
+        <td>0985674321</td>
+        <td>Staff</td>
+        <td>
+            <button bgcolor="#ffc107"><font color="black">Edit</font></button>
+            <button bgcolor="#dc3545"><font color="white">Delete</font></button>
+        </td>
+    </tr>
+    
+    <tr bgcolor="#f9f9f9">
+        <td>2</td>
+        <td>Gabriel Hanna</td>
+        <td>Gabriel Hanna@gmail.com</td>
+        <td>0353674231</td>
+        <td>Staff</td>
+        <td>
+            <button bgcolor="#ffc107"><font color="black">Edit</font></button>
+            <button bgcolor="#dc3545"><font color="white">Delete</font></button>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>3</td>
+        <td>Charles Diya</td>
+        <td>Charles Diya@gmail.com</td>
+        <td>0347658833</td>
+        <td>Staff</td>
+        <td>
+            <button bgcolor="#ffc107"><font color="black">Edit</font></button>
+            <button bgcolor="#dc3545"><font color="white">Delete</font></button>
+        </td>
+    </tr>
+    
+    <tr bgcolor="#f9f9f9">
+        <td>4</td>
+        <td>Frank Lamdo</td>
+        <td>Frank Lamdo@gmail.com</td>
+        <td>0975444768</td>
+        <td>Manager</td>
+        <td>
+            <button bgcolor="#ffc107"><font color="black">Edit</font></button>
+            <button bgcolor="#dc3545"><font color="white">Delete</font></button>
+        </td>
+    </tr>
+    
+    <tr>
+        <td>5</td>
+        <td>Louis Tom</td>
+        <td>Louis Tom@gmail.com</td>
+        <td>0789568223</td>
+        <td>Staff</td>
+        <td>
+            <button bgcolor="#ffc107"><font color="black">Edit</font></button>
+            <button bgcolor="#dc3545"><font color="white">Delete</font></button>
+        </td>
+    </tr>
+    
+</table>
 
-<tr>
-    <td colspan="4">
-        <div class="captcha-label">Are you human?</div>
-        
-        <div class="captcha-box">
-            <div class="captcha-text">TIDANO</div>
-        </div>
-        
-        <div class="click-change">Click to change</div>
-        
-        <input type="text" class="captcha-input" name="captcha" placeholder="">
-    </td>
-</tr>
-
-<tr>
-    <td colspan="4">
-        <hr>
-        <div class="button-row">
-            <div class="nav-buttons">
-                <button type="button" class="nav-btn">◄</button>
-                <button type="button" class="nav-btn">►</button>
-            </div>
-            
-            <div class="action-buttons">
-                <button type="submit" class="submit-btn">Submit</button>
-                <button type="button" class="cancel-btn">Cancel</button>
-            </div>
-        </div>
-        <div class="required">* required</div>
-    </td>
-</tr>
-    </form>
-</div>
-            
-        </table>
-    </form>
 </body>
 </html>
