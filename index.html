@@ -3,75 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th rowspan="2" colspan="2">Student</th>
-            <th colspan= 4>Exam</th>
-            <th colspan= 4>2nd Exam</th>
-            <th rowspan="2" colspan="2">Final Grade</th>
+    
+    <form>
+        <h3>Basic info</h3>
+        <hr>
+        <table cellpadding = "6">
+            <tr>
+                <th><label for="Employee ID">Employee ID</label></th>
+                <td>9</td>
+            </tr>
+            <tr>
+                <th>Last name</th>
+                <td>Dodsworth</td>
+            </tr>
+            <tr>
+                <th><label for="First name">First name</label></th>
+                <td><input type="text" id="First name" value="Anne"></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td><input type="radio" id="male" name="gender" value="male"><label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female"><label for="female">Female</label>
+                    <input type="radio" id="XXX" name="gender" value="XXX"><label for="XXX">XXX</label>
+                    <input type="radio" id="YYY" name="gender" value="YYY"><label for="YYY">YYY</label>
+                    
+                </td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td><input type="text" id="title" placeholder="Title..."></td>
+            </tr>
+            <tr>
+                <th>Suffix</th>
+                <td><input type="text" id="suffix" placeholder="Ms..."></td>
+            </tr>
+            <tr><th>BirthDate</th>
+                <td><input type="datetime-local" id="birthdate" placeholder="BirthDate..."></td></tr> 
+            <tr>
+                <th>Hire Date</th>
+                <td><input type="datetime-local" id="hiredate" placeholder="Hire Date..."></td>
+            </tr>
+            <tr>
+                <th>SSN #(if appicable)</th>
+                <td><input type="text" id="ssn" placeholder="......."></td>
+            </tr>
+            <tr>
+                <th>Report to</th>
+                <td>
+                    <select name="ReportTo" id="ReportTo">
+                        <option value="Buchanan">Buchanan</option>
+                        <option value="aloalo">aloalo</option>
+                        <option value="hihi">hihi</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <h3>Contact info</h3>
+        <hr>
+        <table cellpadding = "6">
+            <tr>
+            <td>Email</td>
+            <td><input type="email" name="email" placeholder="name@example.com"></td>
         </tr>
         <tr>
-            <td>Q1</td>
-            <td>Q2</td>
-            <td>Q3</td>
-            <td rowspan="2">grade</td>
-            <td>Q1</td>
-            <td>Q2</td>
-            <td>Q3</td>
-            <td rowspan="2">grade</td>
+            <td>Address</td>
+            <td><input type="text" name="address" value="7 Houndstooth Rd."></td>
         </tr>
         <tr>
-            <td>Code</td>
-            <td>Name</td>
-            <td>8</td>
-            <td>7</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>NR</td>
-            <td>R</td>
+            <td>City</td>
+            <td><input type="text" name="city" value="London"></td>
         </tr>
         <tr>
-            <td>80549061</td>
-            <td>John</td>
-            <td>70%</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>17.6</td>
-            <td colspan=4"></td>
-            <td>17.6</td>
-            <td>18</td>
+            <td>Region</td>
+            <td><input type="text" name="region"></td>
         </tr>
         <tr>
-            <td>80549062</td>
-            <td>Mary</td>
-            <td>10%</td>
-            <td>50%</td>
-            <td>50%</td>
-            <td>6.8</td>
-            <td>100%</td>
-            <td>100%</td>
-            <td>50%</td>
-            <td>16.5</td>
-            <td>16.5</td>
-            <td>17</td>
+            <td>Postal Code</td>
+            <td><input type="text" name="postal_code" value="WG2 7LT"></td>
         </tr>
         <tr>
-            <td>80549063</td>
-            <td>Claire</td>
-            <td colspan="4"></td>
-            <td>50%</td>
-            <td>50%</td>
-            <td>50%</td>
-            <td>10.0</td>
-            <td>10.0</td>
-            <td>10</td>
+            <td>Country</td>
+            <td><input type="text" name="country" value="VN"></td>
         </tr>
-    </table>
+        <tr>
+            <td>US Phone Home</td>
+            <td><input type="tel" name="phone" value="(234) 234-2342"></td>
+        </tr>
+        <tr>
+            <td>Photo</td>
+            <td><input type="text" name="photo" value="EmpID9.bmp"></td>
+        </tr>
+        </table>
+        <h3>Optional info</h3>
+        <hr>
+        <table cellpadding = "6">
+         <tr>
+    <td>Notes</td>
+    <td colspan="3"><input type="text" name="notes" value="Anne has a BA degree in English " style="width: 100%;"></td>
+</tr>
+<tr>
+    <td>Preferred<br><br>Active?</td>
+    <td><input type="checkbox" name="preferred1" id="preferred1"><label for="preferred1">Regular</label></td>
+    <td><input type="checkbox" name="preferred2" id="preferred2"><label for="preferred2">Gravy Yard</label></td>   
+    <td><input type="checkbox" name="preferred3" id="preferred3"><label for="preferred3">...</label></td>   
+</tr>
+
+<tr>
+    <td colspan="4">
+        <div class="captcha-label">Are you human?</div>
+        
+        <div class="captcha-box">
+            <div class="captcha-text">TIDANO</div>
+        </div>
+        
+        <div class="click-change">Click to change</div>
+        
+        <input type="text" class="captcha-input" name="captcha" placeholder="">
+    </td>
+</tr>
+
+<tr>
+    <td colspan="4">
+        <hr>
+        <div class="button-row">
+            <div class="nav-buttons">
+                <button type="button" class="nav-btn">◄</button>
+                <button type="button" class="nav-btn">►</button>
+            </div>
+            
+            <div class="action-buttons">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+        <div class="required">* required</div>
+    </td>
+</tr>
+    </form>
+</div>
+            
+        </table>
+    </form>
 </body>
 </html>
