@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 table th{
     border : 1px solid black;
 }
@@ -5,4 +6,13 @@ table td{
     border : 1px solid black;
     justify-content: center;
     text-align: center;
+=======
+table th{
+    border : 1px solid black;
+}
+table td{
+    border : 1px solid black;
+    justify-content: center;
+    text-align: center;
+>>>>>>> dafcf4291ef599fb8ff83b3c21c35dbf956aae59
 }
