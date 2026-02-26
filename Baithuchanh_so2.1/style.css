@@ -1,0 +1,40 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#name, #email {
+    width: 47%;
+}
+#subject {
+    display: block;
+    margin-right: auto; 
+    margin-top: 10px;
+    width:100%;
+}
+#message{
+    width:100%;
+    display: block;
+    margin-right: auto; 
+    margin-top: 10px;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end;
+}
+.submit{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1;
+    color:gray;
+    background-color:aqua;
+}
