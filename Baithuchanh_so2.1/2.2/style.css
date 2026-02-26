@@ -1,0 +1,67 @@
+#page-logo img{
+    width: 100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid pink;
+}
+
+#page-logo a { 
+    color:rgb(227, 227, 137);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+#hero {
+    background-color:rgb(40, 36, 33);
+    color :white;
+    display: flex;
+    justify-content: center;
+}
+#hero a{
+    border: 5px;
+    background-color:yellow;
+    color: black;
+}
+
+#highlights {
+    background-color:rgb(162, 242, 242);
+    border: 5px solid pink;
+}
+
+#highlights h2{
+    justify-content:center;
+    display: flex;
+}
+
+#destinations img {
+    width: 33%;
+    height: 100px;
+}
+#destination{
+    display: flex;
+    flex-direction: row;
+}
+
+#destinations p{
+    font-size: 20px;
+    color:brown
+}
+
+footer{
+    border : 5px solid pink;
+    background-color:black;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;;
+}
+footer ul li img { 
+    width: 50px;
+    height: 50px;
+}
