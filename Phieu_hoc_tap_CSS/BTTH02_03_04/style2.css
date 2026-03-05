@@ -1,0 +1,176 @@
+/* TODO 1: Universal selector - reset margin và padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* TODO 2: Type selector cho body */
+body {
+  font-family: Arial;
+  background-color: #f5f5f5;
+}
+
+/* TODO 3: ID selector cho #main-header */
+#main-header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TODO 4: Class selector cho .nav-link */
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+/* TODO 5: Group selector cho h1, h2, h3 */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+}
+
+/* TODO 6: Descendant selector cho nav a */
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* TODO 7: Pseudo-class selector cho a:hover */
+a:hover {
+  color: #ff6600;
+  background-color: #eee;
+}
+
+/*/////////////////////////////////*
+/* Bước 1: Reset box-sizing cho toàn trang */
+* {
+  box-sizing: border-box;
+}
+
+/* Bước 2: Style cho .posts container */
+.posts {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Bước 3: Style cho .card */
+.card {
+  width: 30%;
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+/* Bước 4: Style cho .btn */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
+/* Bài 3A------------------------*/
+
+/* Cải tiến nav bằng Flexbox */
+nav { display: flex; 
+justify-content: center;
+ align-items: center; 
+gap: 20px; 
+background: #f8f9fa; 
+padding: 15px; }
+
+/* Cải tiến .posts bằng Flexbox */
+.posts { display: flex; 
+flex-wrap: wrap; 
+gap: 20px; 
+justify-content: 
+center; 
+max-width: 1200px; 
+margin: 40px auto; }
+
+.card { flex: 0 0 calc(33.33% - 20px); }
+
+/* Responsive: Khi màn hình < 768px, card chiếm full width */
+@media (max-width: 768px) { 
+.posts { flex-direction: column; } 
+.card { flex: 1 1 100%; } }
+
+/* Bài 3B------------------------*/
+
+/* Gallery Grid */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.item {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+
+/* Responsive: Tự động giảm cột khi màn hình nhỏ */
+.gallery {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Bài 4------------------------*/
+
+/* Header sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.scroll-top:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+}
