@@ -1,0 +1,173 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: #f5f5f3;
+  min-height: 100vh;
+}
+ 
+/* ===== Layout ===== */
+.wrap {
+  max-width: 780px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 0.5px solid #ddd;
+  padding: 2rem;
+}
+ 
+h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+ 
+/* ===== Form ===== */
+.form-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+ 
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+ 
+.field label {
+  font-size: 13px;
+  color: #666;
+}
+ 
+.field input {
+  height: 38px;
+  padding: 0 12px;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #fff;
+  transition: box-shadow 0.15s;
+}
+ 
+.field input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2.5px #b5d4f4;
+  border-color: #378add;
+}
+ 
+.field-name  { flex: 2; min-width: 180px; }
+.field-score { flex: 0.8; min-width: 100px; }
+ 
+/* ===== Button Thêm ===== */
+.btn-add {
+  height: 38px;
+  padding: 0 20px;
+  border: 0.5px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+  color: #1a1a1a;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+}
+ 
+.btn-add:hover  { background: #f0f0f0; }
+.btn-add:active { transform: scale(0.97); }
+ 
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+ 
+thead th {
+  font-weight: 500;
+  font-size: 13px;
+  color: #666;
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 0.5px solid #e0e0e0;
+}
+ 
+tbody td {
+  padding: 10px 12px;
+  border-bottom: 0.5px solid #ebebeb;
+  vertical-align: middle;
+}
+ 
+.col-stt   { width: 44px; }
+.col-center { text-align: center; width: 100px; }
+.col-action { width: 70px; text-align: center; }
+ 
+/* ===== Hàng yếu (điểm < 5) ===== */
+.row-weak { background-color: #fff3cd; }
+.row-weak td { color: #7a5c00; }
+ 
+/* ===== Badges xếp loại ===== */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+}
+ 
+.badge-gioi { background: #eaf3de; color: #3b6d11; }
+.badge-kha  { background: #e6f1fb; color: #185fa5; }
+.badge-tb   { background: #faeeda; color: #854f0b; }
+.badge-yeu  { background: #fcebeb; color: #a32d2d; }
+ 
+/* ===== Nút Xóa ===== */
+.btn-del {
+  padding: 4px 11px;
+  font-size: 12px;
+  border: 0.5px solid #ccc;
+  border-radius: 7px;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+ 
+.btn-del:hover {
+  background: #fcebeb;
+  color: #a32d2d;
+  border-color: #f09595;
+}
+ 
+/* ===== Dòng trống ===== */
+.empty {
+  text-align: center;
+  color: #aaa;
+  padding: 2rem;
+  font-size: 14px;
+}
+ 
+/* ===== Thống kê ===== */
+.stats {
+  margin-top: 1.25rem;
+  padding: 11px 16px;
+  background: #f5f5f3;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
+}
+ 
+.stats span {
+  color: #1a1a1a;
+  font-weight: 500;
+}
+ 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý sinh viên</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <div class="wrap">
+    <h2>Quản lý sinh viên</h2>
+ 
+    <div class="form-row">
+      <div class="field field-name">
+        <label for="inp-name">Họ và tên</label>
+        <input type="text" id="inp-name" placeholder="Nguyễn Văn A" />
+      </div>
+      <div class="field field-score">
+        <label for="inp-score">Điểm (0–10)</label>
+        <input type="number" id="inp-score"  min="0" max="10" step="0.1" />
+      </div>
+      <button class="btn-add" id="btn-add">+ Thêm</button>
+    </div>
+ 
+    <table>
+      <thead>
+        <tr>
+          <th class="col-stt">#</th>
+          <th>Họ và tên</th>
+          <th class="col-center">Điểm</th>
+          <th class="col-center">Xếp loại</th>
+          <th class="col-action"></th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+ 
+    <div class="stats">
+      Tổng: <span id="st-count">0</span> sinh viên &nbsp;|&nbsp;
+      Điểm trung bình: <span id="st-avg">—</span>
+    </div>
+  </div>
+ 
+  <script src="main.js"></script>
+</body>
+</html>
