@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt Hàng</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card">
+  <h1>Đặt hàng trực tuyến</h1>
+  <form id="form" novalidate>
+
+    <div class="field" id="f-product">
+      <label for="product">Sản phẩm <span class="req">*</span></label>
+      <select id="product">
+        <option value="">-- Chọn sản phẩm --</option>
+        <option value="ao-thun">Áo thun — 150.000 ₫</option>
+        <option value="quan-jean">Quần jean — 350.000 ₫</option>
+        <option value="giay-sneaker">Giày sneaker — 850.000 ₫</option>
+        <option value="tui-xach">Túi xách — 420.000 ₫</option>
+        <option value="mu-luoi-trai">Mũ lưỡi trai — 95.000 ₫</option>
+        <option value="ao-khoac">Áo khoác — 480.000 ₫</option>
+      </select>
+      <div class="err-msg">Vui lòng chọn sản phẩm</div>
+    </div>
+
+    <div class="field" id="f-qty">
+      <label for="qty">Số lượng <span class="req">*</span></label>
+      <input type="number" id="qty" min="1" max="99" placeholder="1 – 99">
+      <div class="err-msg">Số lượng phải từ 1 đến 99</div>
+    </div>
+
+    <div id="price-box" class="price-box" style="display:none">
+      <span>Tổng tiền</span>
+      <strong id="price-val">0 ₫</strong>
+    </div>
+
+    <div class="field" id="f-date">
+      <label for="date">Ngày giao hàng <span class="req">*</span></label>
+      <input type="date" id="date">
+      <div class="err-msg" id="err-date-msg">Ngày không hợp lệ</div>
+    </div>
+
+    <div class="field" id="f-address">
+      <label for="address">Địa chỉ giao <span class="req">*</span></label>
+      <input type="text" id="address" placeholder="Tối thiểu 10 ký tự">
+      <div class="err-msg">Địa chỉ phải có ít nhất 10 ký tự</div>
+    </div>
+
+    <div class="field" id="f-note">
+      <label for="note">Ghi chú <small>(không bắt buộc)</small></label>
+      <textarea id="note" placeholder="Yêu cầu đặc biệt..."></textarea>
+      <div class="note-meta">
+        <span class="char-count" id="char-count">0/200</span>
+      </div>
+      <div class="err-msg">Ghi chú không quá 200 ký tự</div>
+    </div>
+
+    <div class="field" id="f-pay">
+      <label>Phương thức thanh toán <span class="req">*</span></label>
+      <div class="radio-row">
+        <div class="radio-opt">
+          <input type="radio" name="pay" id="p1" value="COD">
+          <label for="p1">COD</label>
+        </div>
+        <div class="radio-opt">
+          <input type="radio" name="pay" id="p2" value="Chuyển khoản">
+          <label for="p2">Chuyển khoản</label>
+        </div>
+        <div class="radio-opt">
+          <input type="radio" name="pay" id="p3" value="Ví điện tử">
+          <label for="p3">Ví điện tử</label>
+        </div>
+      </div>
+      <div class="err-msg">Vui lòng chọn phương thức thanh toán</div>
+    </div>
+
+    <button type="submit" class="btn-submit">Xem lại đơn hàng →</button>
+    <div id="success">✓ Đặt hàng thành công! Chúng tôi sẽ liên hệ sớm.</div>
+  </form>
+</div>
+
+<!-- Confirm Modal -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2>Xác nhận đơn hàng</h2>
+    <table class="summary-table" id="summary"></table>
+    <div class="modal-btns">
+      <button class="btn-cancel" id="btn-cancel">Hủy</button>
+      <button class="btn-confirm" id="btn-confirm">Xác nhận đặt hàng</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px 60px;
+  color: #111;
+}
+
+/* ── Card ── */
+.card {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 32px 28px 28px;
+}
+
+h1 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ── Fields ── */
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+label small {
+  font-weight: 400;
+  color: #aaa;
+}
+
+.req {
+  color: #d00;
+  margin-left: 2px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #555;
+}
+
+.field.err input,
+.field.err select,
+.field.err textarea {
+  border-color: #d00;
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 76px;
+}
+
+/* ── Error message ── */
+.err-msg {
+  display: none;
+  font-size: 12px;
+  color: #d00;
+  margin-top: 4px;
+}
+
+.field.err .err-msg {
+  display: block;
+}
+
+/* ── Char counter ── */
+.note-meta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #999;
+}
+
+.char-count.over {
+  color: #d00;
+  font-weight: 600;
+}
+
+/* ── Price box ── */
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-top: -4px;
+  margin-bottom: 16px;
+}
+
+.price-box span {
+  font-size: 13px;
+  color: #666;
+}
+
+.price-box strong {
+  font-size: 15px;
+  color: #111;
+}
+
+/* ── Radio ── */
+.radio-row {
+  display: flex;
+  gap: 8px;
+}
+
+.radio-opt {
+  flex: 1;
+}
+
+.radio-opt input[type="radio"] {
+  display: none;
+}
+
+.radio-opt label {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.15s;
+  margin-bottom: 0;
+}
+
+.radio-opt input:checked + label {
+  border-color: #333;
+  background: #f0f0f0;
+  color: #111;
+  font-weight: 600;
+}
+
+.radio-opt label:hover {
+  border-color: #888;
+}
+
+.field.err .radio-opt label {
+  border-color: #f5c0c0;
+}
+
+/* ── Submit button ── */
+.btn-submit {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-submit:hover {
+  background: #444;
+}
+
+/* ── Success message ── */
+#success {
+  display: none;
+  margin-top: 12px;
+  padding: 11px 14px;
+  background: #f0faf4;
+  border: 1px solid #b6dfc8;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1a6640;
+  font-weight: 500;
+}
+
+#success.show {
+  display: block;
+}
+
+/* ── Overlay ── */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+/* ── Modal ── */
+.modal {
+  background: #fff;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  padding: 28px 24px 22px;
+}
+
+.modal h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.summary-table td {
+  padding: 6px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-table td:first-child {
+  color: #777;
+  width: 130px;
+}
+
+.summary-table td:last-child {
+  font-weight: 500;
+}
+
+.summary-table tr.total td {
+  border-bottom: none;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+}
+
+.modal-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+  transition: border-color 0.15s;
+}
+
+.btn-cancel:hover {
+  border-color: #888;
+  color: #111;
+}
+
+.btn-confirm {
+  flex: 2;
+  padding: 9px;
+  border: none;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-confirm:hover {
+  background: #444;
+}

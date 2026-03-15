@@ -1,0 +1,123 @@
+<!--
+| Trường | Ràng buộc |
+|---|---|
+| Họ và tên | Không trống, ≥ 3 ký tự, chỉ chứa chữ cái và khoảng trắng |
+| Email | Không trống, đúng định dạng `name@domain.com` |
+| Số điện thoại | Không trống, 10 chữ số, bắt đầu bằng `0` |
+| Mật khẩu | Không trống, ≥ 8 ký tự, có ít nhất 1 chữ hoa, 1 chữ thường, 1 số |
+| Xác nhận mật khẩu | Phải khớp với mật khẩu |
+| Giới tính | Bắt buộc chọn 1 radio button |
+| Điều khoản | Bắt buộc tick checkbox | -->
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng ký tài khoản</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="card">
+
+    <!-- Form -->
+    <div id="form-area">
+      <div class="header">
+        <div class="eyebrow"></div>
+        <h1>Đăng ký tài khoản</h1>
+        <p class="subtitle">Điền thông tin bên dưới để bắt đầu</p>
+      </div>
+
+      <div class="divider"><span></span></div>
+
+      <form id="reg-form" novalidate>
+
+        <!-- Họ và tên -->
+        <div class="field">
+          <label for="fullname">Họ và tên <span class="req">*</span></label>
+          <input type="text" id="fullname" placeholder="Nguyễn Văn A" autocomplete="name" />
+          <div class="error-msg" id="fullname-error"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" placeholder="ten@domain.com" autocomplete="email" />
+          <div class="error-msg" id="email-error"></div>
+        </div>
+
+        <!-- Số điện thoại -->
+        <div class="field">
+          <label for="phone">Số điện thoại <span class="req">*</span></label>
+          <input type="tel" id="phone" placeholder="*****" autocomplete="tel" maxlength="10" />
+          <div class="error-msg" id="phone-error"></div>
+        </div>
+
+        <!-- Mật khẩu & Xác nhận -->
+        <div class="row-2">
+          <div class="field">
+            <label for="password">Mật khẩu <span class="req">*</span></label>
+            <div class="pw-wrap">
+              <input type="password" id="password" placeholder="••••••••" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" data-target="password" title="Hiện/ẩn mật khẩu">👁</button>
+            </div>
+            <div class="error-msg" id="password-error"></div>
+          </div>
+
+          <div class="field">
+            <label for="confirm">Xác nhận <span class="req">*</span></label>
+            <div class="pw-wrap">
+              <input type="password" id="confirm" placeholder="••••••••" autocomplete="new-password" />
+              <button type="button" class="toggle-pw" data-target="confirm" title="Hiện/ẩn mật khẩu">👁</button>
+            </div>
+            <div class="error-msg" id="confirm-error"></div>
+          </div>
+        </div>
+
+        <!-- Giới tính -->
+        <div class="field">
+          <label>Giới tính <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="gender" value="male" /> Nam
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="female" /> Nữ
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="gender" value="other" /> Khác
+            </label>
+          </div>
+          <div class="error-msg" id="gender-error"></div>
+        </div>
+
+        <!-- Điều khoản -->
+        <div class="field">
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" />
+            <span>Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách bảo mật</a>.</span>
+          </label>
+          <div class="error-msg" id="terms-error"></div>
+        </div>
+
+        <button type="submit" class="btn-submit"><span>Tạo tài khoản →</span></button>
+      </form>
+    </div>
+
+    <!-- Màn hình thành công -->
+    <div class="success-screen" id="success-screen">
+      <h2>Đăng ký thành công!</h2>
+      <p>Chào mừng <span class="success-name" id="success-name"></span> đã gia nhập!<br />Tài khoản của bạn đã được tạo thành công.</p>
+      <div class="success-bar"></div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
